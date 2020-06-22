@@ -1,8 +1,7 @@
 {
-  "image_name": "cyberdojofoundation/clangpp_googlemock",
+  "image_name": "cyberdojofoundation/clangpp_googlemock:ba099d5",
   "display_name": "C++ (clang++), GoogleMock",
-  "visible_filenames":
-  [
+  "visible_filenames": [
     "hiker.tests.cpp",
     "hiker.cpp",
     "hiker.hpp",
@@ -13,7 +12,12 @@
     "makefile",
     "cyber-dojo.sh"
   ],
-  "filename_extension": [ ".cpp", ".hpp", ".c", ".h" ],
+  "filename_extension": [
+    ".cpp",
+    ".hpp",
+    ".c",
+    ".h"
+  ],
   "max_seconds": 10,
   "tab_size": 4
 }
