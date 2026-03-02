@@ -19,5 +19,10 @@ cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 # --------------------------------------------------------------
 
-make
-gcovr --gcov-executable 'llvm-cov gcov' --root . > report/coverage.txt
+#make
+#gcovr --gcov-executable 'llvm-cov gcov' --root . > report/coverage.txt
+
+clang++ -std=c++20 -O1 -Wall -Wextra \
+        -fno-rtti \
+        *.cpp -lgtest -lgtest_main -lgmock -lgmock_main -pthread -o test \
+        && ./test
