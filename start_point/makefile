@@ -1,10 +1,10 @@
 CXXFLAGS += -I.
-CXXFLAGS += -std=c++2a
+CXXFLAGS += -std=c++20
 CXXFLAGS += -Wall
 CXXFLAGS += -Wextra
 CXXFLAGS += -Wshadow
 CXXFLAGS += -Wfloat-equal
-CXXFLAGS += -O
+CXXFLAGS += -O0
 CXXFLAGS += -Wsequence-point
 CXXFLAGS += -Wmissing-noreturn
 CXXFLAGS += -Wunreachable-code
@@ -14,24 +14,25 @@ CXXFLAGS += -fprofile-arcs -ftest-coverage
 CXXFLAGS += -fsanitize=leak,address
 CXXFLAGS += -fno-sanitize-recover=undefined
 CXXFLAGS += -fno-omit-frame-pointer
+CXXFLAGS += -pthread
 
-GTEST_LIBS = -lgtest -lgmock -lgmock_main -pthread
+# Works only if the above compilation flags are NOT changed
+# Remove otherwise.
+CXXFLAGS += -include-pch /usr/local/include/gtest/gtest.h.pch
+CXXFLAGS += -include-pch /usr/local/include/gmock/gmock.h.pch
+
+GTEST_LIBS = -lgtest -lgmock -lgmock_main
 
 HPP_FILES = $(wildcard *.hpp)
-COMPILED_HPP_FILES = $(patsubst %.hpp,%.compiled_hpp,$(HPP_FILES))
 CPP_FILES = $(wildcard *.cpp)
+OBJ_FILES = $(CPP_FILES:.cpp=.o)
 
 .PHONY: test.output
 test.output: test makefile
 	@./$< --gtest_shuffle
 
-test: $(CPP_FILES) $(COMPILED_HPP_FILES)
-	@$(CXX) $(CXXFLAGS) -O $(CPP_FILES) $(GTEST_LIBS) -o $@
+test: $(OBJ_FILES)
+	@$(CXX) $(CXXFLAGS) $^ $(GTEST_LIBS) -o $@
 
-# This rule ensures header files build in their own right.
-# The quality of header files is important because header files
-# are #included from other files and thus have a large span
-# of influence (unlike .cpp files which are not #included)
-
-%.compiled_hpp: %.hpp
-	@$(CXX) -x c++ $(CXXFLAGS) -c -o $@ $<
+%.o: %.cpp $(HPP_FILES) makefile
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
