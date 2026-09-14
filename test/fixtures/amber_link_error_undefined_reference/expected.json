@@ -1,0 +1,13 @@
+{
+  "matches": [
+    "undefined reference to `checksum\\(int\\)'"
+  ],
+  "match_counts": {
+    "^clang\\+\\+: error: linker command failed with exit code 1 \\(use -v to see invocation\\)$": 1,
+    "^make: \\*\\*\\* \\[makefile:35: test\\] Error 1$": 1,
+    "^\\[==========\\] ": 0,
+    "^\\[  PASSED  \\] ": 0,
+    "^\\[  FAILED  \\] ": 0
+  },
+  "truncated": false
+}

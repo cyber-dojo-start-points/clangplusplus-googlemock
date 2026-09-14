@@ -1,0 +1,17 @@
+{
+  "matches": [
+    "^hiker\\.tests\\.cpp:[0-9]+: Failure$",
+    "^Value of: arthur\\.answer\\(\\)$",
+    "^  Actual: 54 \\(of type int\\)$"
+  ],
+  "match_counts": {
+    "^\\[==========\\] Running 3 tests from 1 test suite\\.$": 1,
+    "^\\[       OK \\] Hiker\\.[A-Za-z_]+ \\([0-9]+ ms\\)$": 2,
+    "^\\[  PASSED  \\] 2 tests\\.$": 1,
+    "^\\[  FAILED  \\] Hiker\\.Life_the_universe_and_everything( \\([0-9]+ ms\\))?$": 2,
+    "^\\[  FAILED  \\] 1 test, listed below:$": 1,
+    "^ 1 FAILED TEST$": 1,
+    "^make: \\*\\*\\* \\[makefile:32: test\\.output\\] Error 1$": 1
+  },
+  "truncated": false
+}

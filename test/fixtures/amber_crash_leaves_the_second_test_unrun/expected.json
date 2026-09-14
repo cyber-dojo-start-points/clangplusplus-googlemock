@@ -1,0 +1,15 @@
+{
+  "matches": [
+    "^AddressSanitizer:DEADLYSIGNAL$",
+    "ERROR: AddressSanitizer: SEGV on unknown address"
+  ],
+  "match_counts": {
+    "^\\[==========\\] Running 2 tests from 1 test suite\\.$": 1,
+    "^\\[ RUN      \\] Hiker\\.": 1,
+    "^\\[       OK \\] ": 0,
+    "^\\[  PASSED  \\] ": 0,
+    "^\\[  FAILED  \\] ": 0,
+    "^make: \\*\\*\\* \\[makefile:32: test\\.output\\] Error 1$": 1
+  },
+  "truncated": false
+}

@@ -1,0 +1,13 @@
+{
+  "matches": [
+    "^hiker\\.tests\\.cpp:[0-9]+:[0-9]+: error: unterminated function-like macro invocation$"
+  ],
+  "match_counts": {
+    "^3 errors generated\\.$": 1,
+    "^make: \\*\\*\\* \\[makefile:38: hiker\\.tests\\.o\\] Error 1$": 1,
+    "^\\[==========\\] ": 0,
+    "^\\[  PASSED  \\] ": 0,
+    "^\\[  FAILED  \\] ": 0
+  },
+  "truncated": false
+}

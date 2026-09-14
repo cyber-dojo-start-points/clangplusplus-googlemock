@@ -1,0 +1,13 @@
+{
+  "matches": [
+    "^hiker\\.cpp:[0-9]+:[0-9]+: error: expected '\\)'$"
+  ],
+  "match_counts": {
+    "^1 error generated\\.$": 1,
+    "^make: \\*\\*\\* \\[makefile:38: hiker\\.o\\] Error 1$": 1,
+    "^\\[==========\\] ": 0,
+    "^\\[  PASSED  \\] ": 0,
+    "^\\[  FAILED  \\] ": 0
+  },
+  "truncated": false
+}

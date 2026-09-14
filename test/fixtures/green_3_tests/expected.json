@@ -1,0 +1,14 @@
+{
+  "matches": [
+    "^Running main\\(\\) from gmock_main\\.cc$",
+    "^\\(INFO\\) Writing coverage report\\.\\.\\.$"
+  ],
+  "match_counts": {
+    "^\\[==========\\] Running 3 tests from 1 test suite\\.$": 1,
+    "^\\[       OK \\] Hiker\\.[A-Za-z_]+ \\([0-9]+ ms\\)$": 3,
+    "^\\[  PASSED  \\] 3 tests\\.$": 1,
+    "^\\[  FAILED  \\] ": 0
+  },
+  "max_output_lines": 30,
+  "truncated": false
+}

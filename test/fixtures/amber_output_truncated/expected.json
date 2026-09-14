@@ -1,0 +1,13 @@
+{
+  "matches": [
+    "^\\[==========\\] Running 1 test from 1 test suite\\.$",
+    "^debug: i is [0-9]+, total is [0-9]+$",
+    "^\\(INFO\\) Writing coverage report\\.\\.\\.$"
+  ],
+  "match_counts": {
+    "^\\[  PASSED  \\] ": 0,
+    "^\\[  FAILED  \\] ": 0,
+    "^\\[==========\\] 1 test from 1 test suite ran\\.": 0
+  },
+  "truncated": true
+}
